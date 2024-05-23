@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* Selectors: 
+        1. Simple Selectors:
+            a. tag name (denoted using tag name)
+            b. class name (denoted using .) [PERIOD]
+            c. id selectors (denoted using #) [HASHTAG]
+         */
+        #find-me {
+            background-color: pink;
+        }
+        
+        .color-me-blue {
+            background-color: blue;
+        }
+        .color-me-red {
+            background-color: red;
+        }
+
+
+        input {
+            background-color: #eaff9e;
+        }
+        
+
+        .rounded-button {
+            border-radius: 20px;
+            color: white;
+            font-weight: bolder;
+        }
+        
+        .squared-button {
+            border-radius: 20px;
+            color: white;
+            font-weight: bolder;
+        }
+
+        .green-button{
+            background-color: #eaff9e;
+        }
+        .blue-button{
+            background-color: blue;
+        }
+        .red-button{
+            background-color: red;
+        }
+        .teal-button{
+            background-color: teal;
+        }
+        .pink-button{
+            background-color: pink;
+            color: black
+        }
+
+        
+
+
+    </style>
+</head>
+<body>
+
+    <h1 class="color-me-white">Sign Up</h1>
+    <form action="/index.html" method="POST" style="border: 1px solid black; border-radius: 20px;">
+        <label for="email">Email</label>
+        <input placeholder="Email" type="email" name="email">
+        <label for="number">Number Quantity</label>
+        <input placeholder="Quantity" type="number" name="quantity">
+        <label for="date">Date</label>
+        <input placeholder="Date" type="date" name="date">
+        <label for="range">Rating</label>
+        <input placeholder="Range" type="range" name="range" min = "1" max = "5" step = "any" list = "markers">
+        <datalist id="markers">     <!-- discovered on developer.mozilla.org -->
+            <option value="1"></option>
+            <option value="2"></option>
+            <option value="3"></option>
+            <option value="4"></option>
+            <option value="5"></option>
+            <option value="5"></option>
+          </datalist>
+          <input placeholder="Color" type="color" name="color">
+          <label for="color">Color</label>
+        <button>Submit</button>
+        
+    </form>
+    <button class="rounded-button pink-button" id="find-me">click me</button>
+</body>
+</html>
