@@ -5,28 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-        /* Selectors: 
-        1. Simple Selectors:
-            a. tag name (denoted using tag name)
-            b. class name (denoted using .) [PERIOD]
-            c. id selectors (denoted using #) [HASHTAG]
-         */
-        #find-me {
-            background-color: pink;
-        }
-        
-        .color-me-blue {
-            background-color: blue;
-        }
-        .color-me-red {
-            background-color: red;
-        }
-
 
         input {
             background-color: #eaff9e;
         }
-        
 
         .rounded-button {
             border-radius: 20px;
@@ -40,53 +22,84 @@
             font-weight: bolder;
         }
 
-        .green-button{
+        .green-button {
             background-color: #eaff9e;
         }
-        .blue-button{
-            background-color: blue;
-        }
-        .red-button{
-            background-color: red;
-        }
-        .teal-button{
-            background-color: teal;
-        }
-        .pink-button{
+        .pink-button {
             background-color: pink;
-            color: black
+            color: black;
         }
-
-        
-
-
     </style>
 </head>
 <body>
-
     <h1 class="color-me-white">Sign Up</h1>
     <form action="/index.html" method="POST" style="border: 1px solid black; border-radius: 20px;">
         <label for="email">Email</label>
-        <input placeholder="Email" type="email" name="email">
-        <label for="number">Number Quantity</label>
-        <input placeholder="Quantity" type="number" name="quantity">
+        <input placeholder="Email" type="email" name="email" id="email" aria-required="true">
+        
+        <label for="quantity">Number Quantity</label>
+        <input placeholder="Quantity" type="number" name="quantity" id="quantity" aria-required="true">
+        
         <label for="date">Date</label>
-        <input placeholder="Date" type="date" name="date">
+        <input placeholder="Date" type="date" name="date" id="date" aria-required="true">
+        
         <label for="range">Rating</label>
-        <input placeholder="Range" type="range" name="range" min = "1" max = "5" step = "any" list = "markers">
-        <datalist id="markers">     <!-- discovered on developer.mozilla.org -->
+        <input placeholder="Range" type="range" name="range" id="range" min="1" max="5" step="any" list="markers" aria-required="true">
+        <datalist id="markers">
             <option value="1"></option>
             <option value="2"></option>
             <option value="3"></option>
             <option value="4"></option>
             <option value="5"></option>
-            <option value="5"></option>
-          </datalist>
-          <input placeholder="Color" type="color" name="color">
-          <label for="color">Color</label>
-        <button>Submit</button>
+        </datalist>
         
+        <label for="color">Color</label>
+        <input placeholder="Color" type="color" name="color" id="color">
+
+        <br><br>
+        
+        <label for="lang">Choose your favorite programming language out of these!</label>
+        <select name="lang" id="lang" aria-required="true">
+            <option value="Python">Python</option>
+            <option value="c++">C++</option>
+            <option value="C#">C#</option>
+            <option value="Java">Java</option>
+            <option value="HTML">HTML</option>
+            <option value="CSS">CSS</option>
+        </select>
+        
+        <p>What is your level of expertise in this language?</p>
+        <input type="radio" id="beginner" name="fav_language" value="beginner">
+        <label for="beginner">Beginner</label><br>
+        
+        <input type="radio" id="moderate" name="fav_language" value="moderate">
+        <label for="moderate">Moderately Proficient</label><br>
+        
+        <input type="radio" id="expert" name="fav_language" value="expert">
+        <label for="expert">Expert</label>
+        
+        <p>What are your preferred development platforms?</p>
+        <input type="checkbox" id="windows" name="fav_platform" value="windows">
+        <label for="windows">Windows</label><br>
+        
+        <input type="checkbox" id="linux" name="fav_platform" value="linux">
+        <label for="linux">Linux</label><br>
+        
+        <input type="checkbox" id="macos" name="fav_platform" value="macos">
+        <label for="macos">macOS</label><br>
+        
+        <input type="checkbox" id="android" name="fav_platform" value="android">
+        <label for="android">Android</label><br>
+        
+        <input type="checkbox" id="ios" name="fav_platform" value="ios">
+        <label for="ios">iOS</label><br>
+        
+        <input type="checkbox" id="web" name="fav_platform" value="web">
+        <label for="web">Web</label><br>
+        
+        <br><br>
+        <button>Submit</button>
     </form>
-    <button class="rounded-button pink-button" id="find-me">click me</button>
+    <!--<button class="rounded-button pink-button" id="find-me">click me</button> -->
 </body>
 </html>
